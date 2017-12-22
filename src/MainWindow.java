@@ -18,6 +18,7 @@ public class MainWindow extends JFrame{
     JMenuItem insertPlayer ;
     JMenuItem reset ;
     JMenuItem save ;
+    JMenuItem load;
     JMenuItem close ;
 
     JMenu settingsMenu ;
@@ -60,7 +61,9 @@ public class MainWindow extends JFrame{
       int rows = 10;
 
       int cols = 10;
-
+      
+      int playerCount = 0;
+      int random;
     int count = 0;
     
     int numSnakes = 3;
@@ -89,11 +92,14 @@ public class MainWindow extends JFrame{
         insertPlayer = new JMenuItem("Insert Player Name");
         reset = new JMenuItem("Reset");
         save = new JMenuItem("Save Current Game");
+        load = new JMenuItem("Load Game");
         close = new JMenuItem("Close");
+        close.addActionListener(ml);
 
         fileMenu.add(insertPlayer);
         fileMenu.add(reset);
         fileMenu.add(save);
+        fileMenu.add(load);
         fileMenu.add(close);
         //
 
@@ -102,8 +108,11 @@ public class MainWindow extends JFrame{
 
         playerNum = new JMenu("Insert Number of Players");
         players_num2 = new JRadioButtonMenuItem("2 Players");
+        players_num2.addActionListener(ml);
         players_num3 = new JRadioButtonMenuItem("3 Players");
+        players_num3.addActionListener(ml);
         players_num4 = new JRadioButtonMenuItem("4 Players");
+        players_num4.addActionListener(ml);
         ButtonGroup bg_players = new ButtonGroup();
         bg_players.add(players_num2);
         bg_players.add(players_num3);
@@ -221,6 +230,21 @@ public class MainWindow extends JFrame{
                 boardDialog = new BoardDialog() ;
                 boardDialog.setVisible(true);
             }
+            
+            if(e.getSource() == close)
+            	System.exit(0);
+            
+            if(e.getSource() == players_num2) {
+            	
+            }
+            
+            if(e.getSource() == players_num3) {
+            	playerCount = 3;
+            }
+            
+            if(e.getSource() == players_num4) {
+            	playerCount = 4;
+            }
 
         }
 
@@ -324,8 +348,8 @@ public class MainWindow extends JFrame{
     public class BoardDialog extends JDialog
     {
         JTextField boardSize ;
-        JTextField numSnakes ;
-        JTextField numLadders ;
+        JTextField snakesText ;
+        JTextField laddersText ;
         JButton okButton ;
 
         public BoardDialog()
@@ -352,26 +376,26 @@ public class MainWindow extends JFrame{
             topPanel.add(boardSize);
 
             JLabel snakeLabel = new JLabel("Number of Snakes");
-            numSnakes = new JTextField(13);
-            numSnakes.setText("0-6");
-            numSnakes.addActionListener(bdl);
-            numSnakes.addMouseListener(new MouseAdapter() {
+            snakesText = new JTextField(13);
+            snakesText.setText("0-6");
+            snakesText.addActionListener(bdl);
+            snakesText.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e)
-                {numSnakes.setText("");} });
+                {snakesText.setText("");} });
             centerPanel.add(snakeLabel,BorderLayout.WEST);
-            centerPanel.add(numSnakes,BorderLayout.EAST);
+            centerPanel.add(snakesText,BorderLayout.EAST);
 
             JLabel ladderLabel = new JLabel("Number of Ladders");
-            numLadders = new JTextField(13);
-            numLadders.setText("0-6");
-            numLadders.addActionListener(bdl);
-            numLadders.addMouseListener(new MouseAdapter() {
+            laddersText = new JTextField(13);
+            laddersText.setText("0-6");
+            laddersText.addActionListener(bdl);
+            laddersText.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e)
-                {numLadders.setText("");} });
+                {laddersText.setText("");} });
             centerPanel.add(ladderLabel);
-            centerPanel.add(numLadders);
+            centerPanel.add(laddersText);
 
 
             okButton = new JButton("Save");
@@ -389,21 +413,32 @@ public class MainWindow extends JFrame{
         {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(e.getSource() == numSnakes) {
-                  //  numSnakes.setText();
-                    System.out.println(numSnakes.getText());
-                }
+            	int board = Integer.parseInt(boardSize.getText());
+            	int snakes = Integer.parseInt(snakesText.getText());
+            	int ladders = Integer.parseInt(laddersText.getText());
+                
                 if(e.getSource() == okButton) {
+<<<<<<< HEAD
                     System.out.println(numSnakes.getText());
 
                     count = 0 ;
                     rows = 5 ;
                     cols = 10 ;
 
+=======
+                    count = 0 ;
+                    rows = (board / 10) ;
+                    cols = board / rows ;
+                    numSnakes = snakes;
+                    numLadders = ladders;
+                    random = (int)Math.random();
+                    System.out.println(random);
+>>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
                     bp.removeAll();
                     bp.createBoxes();
                     bp.revalidate();
                     bp.repaint();
+                    
 //                    width = 100 ;
 //
 //                    bp.setVisible(false);
@@ -417,7 +452,7 @@ public class MainWindow extends JFrame{
 //                   bp.revalidate();
 //                   bp.repaint();
 //                   bp.setVisible(true);
-                    System.out.println("working");
+                    
                     dispose();
 
                 }
@@ -435,8 +470,12 @@ public class MainWindow extends JFrame{
     {
         public BoxesPanel() {
             createBoxes();
+<<<<<<< HEAD
 
 //            this.setLayout(new GridLayout(rows, cols));
+=======
+ //           this.setLayout(new GridLayout(rows, cols));
+>>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
 //
 //    //initializing the boxes
 //            for (int i = 0; i < rows; i++)
@@ -497,10 +536,10 @@ public class MainWindow extends JFrame{
 
             //initializing the boxes
             for (int i = 0; i < rows; i++)
-
                 for (int j = 0; j < cols; j++)
-
                     this.add(grid[i][j] = new Box(i, j));
+            
+            
             //drawing the boxes and the numbers inside them depending on whether the rows are even or odd.
             for (int i = rows - 1; i > -1; i--) {
                 if (rows % 2 == 0) {
@@ -530,13 +569,25 @@ public class MainWindow extends JFrame{
 
                     if (i % 2 != 0)
 
-                        for (int j = cols - 1; j > -1; j--)
-                            grid[i][j].add(new JLabel(count++ + ""));
+                        for (int j = cols - 1; j > -1; j--) {
+                        	 grid[i][j].add(new JLabel(count++ + ""));
+                        	 if (j % 2 == 0)
+                                 grid[i][j].setBackground(Color.GREEN);
+                             else
+                                 grid[i][j].setBackground(Color.YELLOW);
+                        }
+                           
 
 
                     else {
-                        for (int j = 0; j < cols; j++)
-                            grid[i][j].add(new JLabel(count++ + ""));
+                        for (int j = 0; j < cols; j++) {
+                        	grid[i][j].add(new JLabel(count++ + ""));
+                        	if (j % 2 == 0)
+                                grid[i][j].setBackground(Color.GREEN);
+                            else
+                                grid[i][j].setBackground(Color.YELLOW);
+                        }
+                            
 
                     }
 
@@ -561,13 +612,11 @@ public class MainWindow extends JFrame{
         {
             super.paintComponent(g);
         	Random rand = new Random();
-        	int coordX_initial = rand.nextInt(655-45) + 45;
-        	int coordX_final = rand.nextInt(655-45) + 45;
-        	int coordY_initial = rand.nextInt(370-85) + 85;
-        	int coordY_final = rand.nextInt(520-420) + 420;
+        	
         	
         	Snake[] snakes = new Snake[numSnakes];
         	Ladder[] ladders = new Ladder[numLadders];
+<<<<<<< HEAD
 
                     for (int i = 0; i < snakes.length; i++)
                         snakes[i] = new Snake(45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (371 - 85)), 45 + (int) (Math.random() * (656 - 45)), 420 + (int) (Math.random() * (500 - 420)));
@@ -584,7 +633,39 @@ public class MainWindow extends JFrame{
 
             p1 = new Player("player1",xPlayer,yPlayer,Color.BLACK);
            p1.draw(g);
+=======
+        		
+           for(int i = 0; i < snakes.length; i++) 
+        	   snakes[i] = new Snake(45 + (int) (Math.random() * (656-45)), 85 + (int) (Math.random() * (371-85)), 45 + (int) (Math.random() * (656-45)),420 + (int) (Math.random() * (500-420)) );
+        	   
+           for(int i = 0; i < snakes.length; i++) 
+           snakes[i].draw(g); 
+           
+           for(int i = 0; i < ladders.length; i++) {
+        	   ladders[i] = new Ladder(45 + (int) (Math.random() * (656-45)) , 370 + (int) (Math.random() * (470-370)) , 45 + (int) (Math.random() * (656-45)),85 + (int) (Math.random() * (180-85)));
+        	   ladders[i].draw(g);
+           }
 
+
+           Player p1 = new Player("player1",startX,startY,Color.BLACK);
+           p1.paint(g);
+           
+           Player p2 = new Player("player2",startX, startY,Color.RED);
+           p2.paint(g);
+           
+           if(playerCount == 3) {
+        	   Player p3 = new Player("player3",startX,startY,Color.BLUE);
+        	   p3.paint(g);
+           }
+           
+           if(playerCount == 4) {
+>>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
+
+        	   Player p3 = new Player("player3", startX,startY,Color.BLUE);
+        	   Player p4 = new Player("player4",startX,startY,Color.CYAN);
+        	   p3.paint(g);
+        	   p4.paint(g);
+           }
         }
 
 
@@ -610,15 +691,6 @@ public class MainWindow extends JFrame{
     }
 
 
-    public class PlayerRun extends Thread {
-        @Override
-        public void run() {
-            super.run();
-            startX++;
-        }
-    }
-
-
     public class Player
     {
         int x ;
@@ -635,8 +707,46 @@ public class MainWindow extends JFrame{
             this.c = c ;
 
         }
+<<<<<<< HEAD
 
         public void draw(Graphics g)
+=======
+        
+        public int getX() {
+			return x;
+		}
+
+		public void setX(int x) {
+			this.x = x;
+		}
+
+		public int getY() {
+			return y;
+		}
+
+		public void setY(int y) {
+			this.y = y;
+		}
+
+		public Color getC() {
+			return c;
+		}
+
+		public void setC(Color c) {
+			this.c = c;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+		
+		
+		public void paint(Graphics g)
+>>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
         {
             g.setColor(c);
             g.fillOval(x,y,13,13);
