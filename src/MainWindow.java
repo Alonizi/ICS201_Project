@@ -43,10 +43,17 @@ public class MainWindow extends JFrame{
 
     JButton rollButton ;
     JLabel posLabel ;
+    JLabel rollLabel ;
+    int dice1 =0 ;
+    int dice2 =0;
+    Random randomGen ;
 
-
+    int factor= 72 ;
     int startX = 23 ;
     int startY = 485;
+    int xPlayer =startX;
+    int yPlayer =startY;
+    Player p1 ;
 
     /// Testing !!
 
@@ -63,6 +70,7 @@ public class MainWindow extends JFrame{
     public Box[][] grid = new Box[rows][cols];
 
     ///
+
 
 
 
@@ -155,6 +163,8 @@ public class MainWindow extends JFrame{
         bp = new BoxesPanel();
         add(bp);
 
+
+
         dp = new DrawingPanel();
 
         JPanel glassPanel = (JPanel) this.getGlassPane();
@@ -164,11 +174,16 @@ public class MainWindow extends JFrame{
 
 
 
+
         Dimension d = new Dimension(150,150);
         JPanel supportPanel = new JPanel();
         supportPanel.setPreferredSize(d);
         rollButton = new JButton("Roll Dice !");
+        rollButton.addActionListener(new SupportListener());
         posLabel = new JLabel("x,y :");
+        rollLabel = new JLabel(dice1+" : "+dice2);
+        randomGen = new Random();
+        supportPanel.add(rollLabel);
         supportPanel.add(rollButton);
         supportPanel.add(posLabel);
         add(supportPanel,BorderLayout.SOUTH);
@@ -212,6 +227,42 @@ public class MainWindow extends JFrame{
 
     }
     // End of Class MenuListener //
+
+    public class SupportListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(e.getSource() == rollButton);
+            {
+            dice1 = randomGen.nextInt(7-1)+1;
+            dice2 = randomGen.nextInt(7-1)+1;
+            rollLabel.setText(dice1+" : "+dice2);
+
+            int newX = xPlayer +factor;
+                 if(newX < 0 )
+                 {
+                     factor = 72  ;
+                     yPlayer = yPlayer -50;
+                     xPlayer = xPlayer - factor;
+
+
+                 }
+
+                if(newX >700)
+                {
+                    yPlayer = yPlayer -50;
+                    factor = -72;
+                    xPlayer = xPlayer - factor;
+                }
+                xPlayer = xPlayer + factor ;
+
+
+            dp.repaint();
+
+
+
+            }
+        }
+    }
 
     // Class for Frame Listener
     public class FrameListen implements MouseMotionListener
@@ -344,9 +395,11 @@ public class MainWindow extends JFrame{
                 }
                 if(e.getSource() == okButton) {
                     System.out.println(numSnakes.getText());
+
                     count = 0 ;
                     rows = 5 ;
                     cols = 10 ;
+
                     bp.removeAll();
                     bp.createBoxes();
                     bp.revalidate();
@@ -382,6 +435,7 @@ public class MainWindow extends JFrame{
     {
         public BoxesPanel() {
             createBoxes();
+
 //            this.setLayout(new GridLayout(rows, cols));
 //
 //    //initializing the boxes
@@ -505,6 +559,7 @@ public class MainWindow extends JFrame{
 
         public void paintComponent(Graphics g)
         {
+            super.paintComponent(g);
         	Random rand = new Random();
         	int coordX_initial = rand.nextInt(655-45) + 45;
         	int coordX_final = rand.nextInt(655-45) + 45;
@@ -513,21 +568,22 @@ public class MainWindow extends JFrame{
         	
         	Snake[] snakes = new Snake[numSnakes];
         	Ladder[] ladders = new Ladder[numLadders];
-        		
-           for(int i = 0; i < snakes.length; i++) 
-        	   snakes[i] = new Snake(45 + (int) (Math.random() * (656-45)), 85 + (int) (Math.random() * (371-85)), 45 + (int) (Math.random() * (656-45)),420 + (int) (Math.random() * (500-420)) );
-        	   
-           for(int i = 0; i < snakes.length; i++) 
-           snakes[i].draw(g); 
-           
-           for(int i = 0; i < ladders.length; i++) {
-        	   ladders[i] = new Ladder(45 + (int) (Math.random() * (656-45)) , 370 + (int) (Math.random() * (470-370)) , 45 + (int) (Math.random() * (656-45)),85 + (int) (Math.random() * (180-85)));
-        	   ladders[i].draw(g);
-           }
+
+                    for (int i = 0; i < snakes.length; i++)
+                        snakes[i] = new Snake(45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (371 - 85)), 45 + (int) (Math.random() * (656 - 45)), 420 + (int) (Math.random() * (500 - 420)));
+
+                    for (int i = 0; i < snakes.length; i++)
+                        snakes[i].draw(g);
+
+                    for (int i = 0; i < ladders.length; i++) {
+                        ladders[i] = new Ladder(45 + (int) (Math.random() * (656 - 45)), 370 + (int) (Math.random() * (470 - 370)), 45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (180 - 85)));
+                        ladders[i].draw(g);
+                    }
 
 
-           Player p1 = new Player("player1",startX,startY,Color.BLACK);
-           p1.paint(g);
+
+            p1 = new Player("player1",xPlayer,yPlayer,Color.BLACK);
+           p1.draw(g);
 
         }
 
@@ -572,6 +628,7 @@ public class MainWindow extends JFrame{
 
         public Player(String name ,int x,int y , Color c)
         {
+
             this.x = x ;
             this.y = y ;
             this.name = name ;
@@ -579,11 +636,43 @@ public class MainWindow extends JFrame{
 
         }
 
-        public void paint(Graphics g)
+        public void draw(Graphics g)
         {
             g.setColor(c);
             g.fillOval(x,y,13,13);
             g.fillRect(x,y+12,13,13);
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        public Color getC() {
+            return c;
+        }
+
+        public void setC(Color c) {
+            this.c = c;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
         }
     }
 

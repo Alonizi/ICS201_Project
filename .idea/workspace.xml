@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07c6978b-e495-4c4f-aa6b-d92c2e9fe6d2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/Box.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/ExecutableWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoardDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoardDialog$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoardDialog$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoardDialog$BoardDialogListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoardDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$BoxesPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$DrawingPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$HelpDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow$MenuListen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/MainWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/Project.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ICS201_Project/ProjectTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Project.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ProjectTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExecutableWindow.java" afterPath="$PROJECT_DIR$/src/ExecutableWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainWindow.java" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,18 +22,33 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="240" column="27" lean-forward="false" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
+            <state relative-caret-position="183">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
-                <element signature="e#4360#4387#0" expanded="false" />
+                <element signature="e#4716#4743#0" expanded="false" />
                 <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
                 <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
                 <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-                <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-                <element signature="e#10057#10092#0" expanded="false" />
-                <element signature="e#10728#10785#0" expanded="false" />
+                <element signature="e#11288#11323#0" expanded="false" />
+                <element signature="e#11960#12017#0" expanded="false" />
                 <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-                <element signature="e#15684#15703#0" expanded="false" />
+                <element signature="e#17016#17035#0" expanded="false" />
+                <element signature="e#18072#18073#0" expanded="true" />
+                <element signature="e#18104#18105#0" expanded="true" />
+                <element signature="e#18139#18140#0" expanded="true" />
+                <element signature="e#18173#18174#0" expanded="true" />
+                <element signature="e#18202#18203#0" expanded="true" />
+                <element signature="e#18234#18235#0" expanded="true" />
+                <element signature="e#18269#18270#0" expanded="true" />
+                <element signature="e#18303#18304#0" expanded="true" />
+                <element signature="e#18334#18335#0" expanded="true" />
+                <element signature="e#18366#18367#0" expanded="true" />
+                <element signature="e#18403#18404#0" expanded="true" />
+                <element signature="e#18437#18438#0" expanded="true" />
+                <element signature="e#18472#18473#0" expanded="true" />
+                <element signature="e#18507#18508#0" expanded="true" />
+                <element signature="e#18551#18552#0" expanded="true" />
+                <element signature="e#18591#18592#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -442,23 +440,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1331" height="706" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24718256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24718256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -469,7 +468,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -491,15 +489,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -533,15 +546,30 @@
         <state relative-caret-position="2970">
           <caret line="240" column="27" lean-forward="false" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -575,15 +603,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,15 +660,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -659,15 +717,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -701,15 +774,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,15 +825,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,15 +876,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -809,15 +927,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -845,15 +978,30 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,26 +1018,18 @@
     <entry file="file://$PROJECT_DIR$/src/ProjectTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Player.java" />
     <entry file="file://$PROJECT_DIR$/src/Project.java" />
-    <entry file="file://$PROJECT_DIR$/src/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExecutableWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ladder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -902,20 +1042,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExecutableWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="240" column="27" lean-forward="false" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
+        <state relative-caret-position="183">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#4360#4387#0" expanded="false" />
+            <element signature="e#4716#4743#0" expanded="false" />
             <element signature="class#MenuListen#0;class#MainWindow#0" expanded="false" />
             <element signature="class#FrameListen#0;class#MainWindow#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#FrameListen#0;class#MainWindow#0" expanded="false" />
-            <element signature="class#BoardDialog#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#10057#10092#0" expanded="false" />
-            <element signature="e#10728#10785#0" expanded="false" />
+            <element signature="e#11288#11323#0" expanded="false" />
+            <element signature="e#11960#12017#0" expanded="false" />
             <element signature="method#createBoxes#0;class#BoxesPanel#0;class#MainWindow#0" expanded="false" />
-            <element signature="e#15684#15703#0" expanded="false" />
+            <element signature="e#17016#17035#0" expanded="false" />
+            <element signature="e#18072#18073#0" expanded="true" />
+            <element signature="e#18104#18105#0" expanded="true" />
+            <element signature="e#18139#18140#0" expanded="true" />
+            <element signature="e#18173#18174#0" expanded="true" />
+            <element signature="e#18202#18203#0" expanded="true" />
+            <element signature="e#18234#18235#0" expanded="true" />
+            <element signature="e#18269#18270#0" expanded="true" />
+            <element signature="e#18303#18304#0" expanded="true" />
+            <element signature="e#18334#18335#0" expanded="true" />
+            <element signature="e#18366#18367#0" expanded="true" />
+            <element signature="e#18403#18404#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18472#18473#0" expanded="true" />
+            <element signature="e#18507#18508#0" expanded="true" />
+            <element signature="e#18551#18552#0" expanded="true" />
+            <element signature="e#18591#18592#0" expanded="true" />
           </folding>
         </state>
       </provider>
