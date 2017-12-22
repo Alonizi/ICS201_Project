@@ -418,14 +418,13 @@ public class MainWindow extends JFrame{
             	int ladders = Integer.parseInt(laddersText.getText());
                 
                 if(e.getSource() == okButton) {
-<<<<<<< HEAD
-                    System.out.println(numSnakes.getText());
+
+                    //System.out.println(numSnakes.getText());
 
                     count = 0 ;
                     rows = 5 ;
                     cols = 10 ;
 
-=======
                     count = 0 ;
                     rows = (board / 10) ;
                     cols = board / rows ;
@@ -433,7 +432,6 @@ public class MainWindow extends JFrame{
                     numLadders = ladders;
                     random = (int)Math.random();
                     System.out.println(random);
->>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
                     bp.removeAll();
                     bp.createBoxes();
                     bp.revalidate();
@@ -470,12 +468,12 @@ public class MainWindow extends JFrame{
     {
         public BoxesPanel() {
             createBoxes();
-<<<<<<< HEAD
-
-//            this.setLayout(new GridLayout(rows, cols));
-=======
- //           this.setLayout(new GridLayout(rows, cols));
->>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
+//<<<<<<< HEAD
+//
+////            this.setLayout(new GridLayout(rows, cols));
+//=======
+// //           this.setLayout(new GridLayout(rows, cols));
+//>>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
 //
 //    //initializing the boxes
 //            for (int i = 0; i < rows; i++)
@@ -616,7 +614,7 @@ public class MainWindow extends JFrame{
         	
         	Snake[] snakes = new Snake[numSnakes];
         	Ladder[] ladders = new Ladder[numLadders];
-<<<<<<< HEAD
+
 
                     for (int i = 0; i < snakes.length; i++)
                         snakes[i] = new Snake(45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (371 - 85)), 45 + (int) (Math.random() * (656 - 45)), 420 + (int) (Math.random() * (500 - 420)));
@@ -632,9 +630,8 @@ public class MainWindow extends JFrame{
 
 
             p1 = new Player("player1",xPlayer,yPlayer,Color.BLACK);
-           p1.draw(g);
-=======
-        		
+           p1.paint(g);
+
            for(int i = 0; i < snakes.length; i++) 
         	   snakes[i] = new Snake(45 + (int) (Math.random() * (656-45)), 85 + (int) (Math.random() * (371-85)), 45 + (int) (Math.random() * (656-45)),420 + (int) (Math.random() * (500-420)) );
         	   
@@ -659,7 +656,6 @@ public class MainWindow extends JFrame{
            }
            
            if(playerCount == 4) {
->>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
 
         	   Player p3 = new Player("player3", startX,startY,Color.BLUE);
         	   Player p4 = new Player("player4",startX,startY,Color.CYAN);
@@ -707,11 +703,7 @@ public class MainWindow extends JFrame{
             this.c = c ;
 
         }
-<<<<<<< HEAD
 
-        public void draw(Graphics g)
-=======
-        
         public int getX() {
 			return x;
 		}
@@ -746,44 +738,13 @@ public class MainWindow extends JFrame{
 		
 		
 		public void paint(Graphics g)
->>>>>>> 17e3ce9c7bcfbf6e9bc11c476bcdb12353b7b490
         {
             g.setColor(c);
             g.fillOval(x,y,13,13);
             g.fillRect(x,y+12,13,13);
         }
 
-        public int getX() {
-            return x;
-        }
 
-        public void setX(int x) {
-            this.x = x;
-        }
-
-        public int getY() {
-            return y;
-        }
-
-        public void setY(int y) {
-            this.y = y;
-        }
-
-        public Color getC() {
-            return c;
-        }
-
-        public void setC(Color c) {
-            this.c = c;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
     }
 
 
