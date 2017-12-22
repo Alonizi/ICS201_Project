@@ -4,12 +4,17 @@ import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Random;
 
 /**
  * Created by abdulazizalonizi on 12/9/17.
  */
-public class MainWindow extends JFrame{
+public class MainWindow extends JFrame implements Serializable{
 
 
     JMenuBar mainBar ;
@@ -69,7 +74,7 @@ public class MainWindow extends JFrame{
     int numSnakes = 3;
     
     int numLadders = 3;
-    
+    int snakeIX, snakeFX, snakeIY, snakeFY, ladderIX, ladderFX, ladderIY, ladderFY;
     public Box[][] grid = new Box[rows][cols];
 
     ///
@@ -92,7 +97,9 @@ public class MainWindow extends JFrame{
         insertPlayer = new JMenuItem("Insert Player Name");
         reset = new JMenuItem("Reset");
         save = new JMenuItem("Save Current Game");
+        save.addActionListener(ml);
         load = new JMenuItem("Load Game");
+        load.addActionListener(ml);
         close = new JMenuItem("Close");
         close.addActionListener(ml);
 
@@ -234,6 +241,15 @@ public class MainWindow extends JFrame{
             if(e.getSource() == close)
             	System.exit(0);
             
+            if(e.getSource() == save) {
+            	try {
+					ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("myFile.data")));
+					oos.writeObject(this);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+            }
             if(e.getSource() == players_num2) {
             	
             }
@@ -430,8 +446,16 @@ public class MainWindow extends JFrame{
                     cols = board / rows ;
                     numSnakes = snakes;
                     numLadders = ladders;
-                    random = (int)Math.random();
-                    System.out.println(random);
+                    
+                    snakeIX  = 45 + (int) (Math.random() * (656 - 45));
+                    snakeFX  = 45 + (int) (Math.random() * (656 - 45));
+                    ladderIX  = 45 + (int) (Math.random() * (656 - 45));
+                    ladderFX  = 45 + (int) (Math.random() * (656 - 45));
+                    snakeIY = 85 + (int) (Math.random() * (371 - 85));
+                    snakeFY = 420 + (int) (Math.random() * (500 - 420));
+                    ladderIY = 370 + (int) (Math.random() * (470 - 370));
+                    ladderFY = 85 + (int) (Math.random() * (180 - 85));
+                    
                     bp.removeAll();
                     bp.createBoxes();
                     bp.revalidate();
@@ -615,37 +639,24 @@ public class MainWindow extends JFrame{
         	Snake[] snakes = new Snake[numSnakes];
         	Ladder[] ladders = new Ladder[numLadders];
 
+        	for (int i = 0; i < snakes.length; i++)
+                snakes[i] = new Snake(snakeIX, snakeIY, snakeFX, snakeFY);
 
-                    for (int i = 0; i < snakes.length; i++)
-                        snakes[i] = new Snake(45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (371 - 85)), 45 + (int) (Math.random() * (656 - 45)), 420 + (int) (Math.random() * (500 - 420)));
+            for (int i = 0; i < snakes.length; i++)
+                snakes[i].draw(g);
 
-                    for (int i = 0; i < snakes.length; i++)
-                        snakes[i].draw(g);
-
-                    for (int i = 0; i < ladders.length; i++) {
-                        ladders[i] = new Ladder(45 + (int) (Math.random() * (656 - 45)), 370 + (int) (Math.random() * (470 - 370)), 45 + (int) (Math.random() * (656 - 45)), 85 + (int) (Math.random() * (180 - 85)));
-                        ladders[i].draw(g);
-                    }
-
+            for (int i = 0; i < ladders.length; i++) {
+                ladders[i] = new Ladder(ladderIX, ladderIY, ladderFX, ladderFY);
+                ladders[i].draw(g);
+            }
 
 
             p1 = new Player("player1",xPlayer,yPlayer,Color.BLACK);
            p1.paint(g);
 
-           for(int i = 0; i < snakes.length; i++) 
-        	   snakes[i] = new Snake(45 + (int) (Math.random() * (656-45)), 85 + (int) (Math.random() * (371-85)), 45 + (int) (Math.random() * (656-45)),420 + (int) (Math.random() * (500-420)) );
-        	   
-           for(int i = 0; i < snakes.length; i++) 
-           snakes[i].draw(g); 
-           
-           for(int i = 0; i < ladders.length; i++) {
-        	   ladders[i] = new Ladder(45 + (int) (Math.random() * (656-45)) , 370 + (int) (Math.random() * (470-370)) , 45 + (int) (Math.random() * (656-45)),85 + (int) (Math.random() * (180-85)));
-        	   ladders[i].draw(g);
-           }
+          
 
-
-           Player p1 = new Player("player1",startX,startY,Color.BLACK);
-           p1.paint(g);
+         
            
            Player p2 = new Player("player2",startX, startY,Color.RED);
            p2.paint(g);

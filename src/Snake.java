@@ -3,9 +3,10 @@ import java.awt.*;
 import javax.swing.*;
 
 import java.awt.geom.Line2D;
+import java.io.Serializable;
 
 
-public class Snake extends JPanel{
+public class Snake extends JPanel implements Serializable{
 	int initialX;
 	int initialY;
 	int finalX;
