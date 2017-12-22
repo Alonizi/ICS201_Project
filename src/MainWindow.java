@@ -1,16 +1,17 @@
+import javax.print.attribute.standard.PrinterLocation;
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
+import java.util.Random;
 
 /**
  * Created by abdulazizalonizi on 12/9/17.
  */
 public class MainWindow extends JFrame{
+
+
     JMenuBar mainBar ;
 
     JMenu fileMenu ;
@@ -38,19 +39,27 @@ public class MainWindow extends JFrame{
     BoardDialog boardDialog ;
 
     BoxesPanel bp ;
+    DrawingPanel dp;
+
+    JButton rollButton ;
+    JLabel posLabel ;
 
 
+    int startX = 23 ;
+    int startY = 485;
 
+    /// Testing !!
 
+      int rows = 10;
 
-        /// Testing !!
-
-    public static int rows = 6;
-
-    public static int cols = 5;
+      int cols = 10;
 
     int count = 0;
-
+    
+    int numSnakes = 3;
+    
+    int numLadders = 3;
+    
     public Box[][] grid = new Box[rows][cols];
 
     ///
@@ -64,6 +73,7 @@ public class MainWindow extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MenuListen ml = new MenuListen();
         setLayout(new BorderLayout());
+        setResizable(false);
 
 
         //File Menu
@@ -143,9 +153,9 @@ public class MainWindow extends JFrame{
 
 
         bp = new BoxesPanel();
-      add(bp);
+        add(bp);
 
-        DrawingPanel dp = new DrawingPanel();
+        dp = new DrawingPanel();
 
         JPanel glassPanel = (JPanel) this.getGlassPane();
         glassPanel.setLayout(new BorderLayout());
@@ -153,6 +163,22 @@ public class MainWindow extends JFrame{
         glassPanel.setVisible(true);
 
 
+
+        Dimension d = new Dimension(150,150);
+        JPanel supportPanel = new JPanel();
+        supportPanel.setPreferredSize(d);
+        rollButton = new JButton("Roll Dice !");
+        posLabel = new JLabel("x,y :");
+        supportPanel.add(rollButton);
+        supportPanel.add(posLabel);
+        add(supportPanel,BorderLayout.SOUTH);
+
+
+        addMouseMotionListener(new FrameListen());
+
+//        setGlassPane(dp);
+//        dp.setVisible(true);
+//        setResizable(true);
 
 
 
@@ -187,6 +213,22 @@ public class MainWindow extends JFrame{
     }
     // End of Class MenuListener //
 
+    // Class for Frame Listener
+    public class FrameListen implements MouseMotionListener
+    {
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+
+
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+            posLabel.setText("x,y :"+e.getX()+","+e.getY());
+        }
+    }
+
     // *** Class HelpDialog for Help Menu ***///
     public class HelpDialog extends JDialog
     {
@@ -219,9 +261,7 @@ public class MainWindow extends JFrame{
            add(scroll);
 
 
-
         }
-
 
         }
 
@@ -288,11 +328,6 @@ public class MainWindow extends JFrame{
             bottomPanel.add(okButton,BorderLayout.SOUTH);
 
 
-
-
-
-
-
             add(topPanel,BorderLayout.NORTH);
             add(centerPanel,BorderLayout.CENTER);
             add(bottomPanel,BorderLayout.SOUTH);
@@ -309,14 +344,33 @@ public class MainWindow extends JFrame{
                 }
                 if(e.getSource() == okButton) {
                     System.out.println(numSnakes.getText());
+                    count = 0 ;
+                    rows = 5 ;
+                    cols = 10 ;
+                    bp.removeAll();
+                    bp.createBoxes();
+                    bp.revalidate();
+                    bp.repaint();
+//                    width = 100 ;
+//
+//                    bp.setVisible(false);
+//                    bp.removeAll();
+//                    bp.revalidate();
+//
+//                    rows = 5;
+//                    cols = 10 ;
+//
+//                   bp.createBoxes();
+//                   bp.revalidate();
+//                   bp.repaint();
+//                   bp.setVisible(true);
+                    System.out.println("working");
                     dispose();
-                }
 
+                }
 
             }
         }
-
-
 
     }
 
@@ -327,15 +381,73 @@ public class MainWindow extends JFrame{
     public class BoxesPanel extends JPanel
     {
         public BoxesPanel() {
+            createBoxes();
+//            this.setLayout(new GridLayout(rows, cols));
+//
+//    //initializing the boxes
+//            for (int i = 0; i < rows; i++)
+//
+//                for (int j = 0; j < cols; j++)
+//
+//                    this.add(grid[i][j] = new Box(i, j));
+//    //drawing the boxes and the numbers inside them depending on whether the rows are even or odd.
+//            for (int i = rows - 1; i > -1; i--) {
+//                if (rows % 2 == 0) {
+//
+//                    if (i % 2 == 0)
+//                        for (int j = cols - 1; j > -1; j--) {
+//                            grid[i][j].add(new JLabel(count++ + ""));
+//                            if (j % 2 == 0)
+//                                grid[i][j].setBackground(Color.GREEN);
+//                            else
+//                                grid[i][j].setBackground(Color.YELLOW);
+//                        }
+//
+//                    else {
+//
+//                        for (int j = 0; j < cols; j++) {
+//                            grid[i][j].add(new JLabel(count++ + ""));
+//                            if (j % 2 == 0)
+//                                grid[i][j].setBackground(Color.GREEN);
+//                            else
+//                                grid[i][j].setBackground(Color.YELLOW);
+//                        }
+//
+//                    }
+//
+//                } else {
+//
+//                    if (i % 2 != 0)
+//
+//                        for (int j = cols - 1; j > -1; j--)
+//                            grid[i][j].add(new JLabel(count++ + ""));
+//
+//
+//                    else {
+//                        for (int j = 0; j < cols; j++)
+//                            grid[i][j].add(new JLabel(count++ + ""));
+//
+//                    }
+//
+//
+//                }
+//
+//            }
+
+            //this.setVisible(true);
+        }
+
+        public void createBoxes()
+        {
             this.setLayout(new GridLayout(rows, cols));
 
-    //initializing the boxes
+            //initializing the boxes
             for (int i = 0; i < rows; i++)
 
                 for (int j = 0; j < cols; j++)
 
                     this.add(grid[i][j] = new Box(i, j));
-    //drawing the boxes and the numbers inside them depending on whether the rows are even or odd.
+            //drawing the boxes and the numbers inside them depending on whether the rows are even or odd.
             for (int i = rows - 1; i > -1; i--) {
                 if (rows % 2 == 0) {
 
@@ -381,25 +493,99 @@ public class MainWindow extends JFrame{
 
             //this.setVisible(true);
         }
+        }
 
-    }
+
 
         // Draw Class , AMROOOOO DRAW YOUR STUFF HERE !!! ///
 
-    public class DrawingPanel extends JComponent
+    public class DrawingPanel extends JComponent //implements ComponentListener
     {
 
 
         public void paintComponent(Graphics g)
         {
+        	Random rand = new Random();
+        	int coordX_initial = rand.nextInt(655-45) + 45;
+        	int coordX_final = rand.nextInt(655-45) + 45;
+        	int coordY_initial = rand.nextInt(370-85) + 85;
+        	int coordY_final = rand.nextInt(520-420) + 420;
+        	
+        	Snake[] snakes = new Snake[numSnakes];
+        	Ladder[] ladders = new Ladder[numLadders];
+        		
+           for(int i = 0; i < snakes.length; i++) 
+        	   snakes[i] = new Snake(45 + (int) (Math.random() * (656-45)), 85 + (int) (Math.random() * (371-85)), 45 + (int) (Math.random() * (656-45)),420 + (int) (Math.random() * (500-420)) );
+        	   
+           for(int i = 0; i < snakes.length; i++) 
+           snakes[i].draw(g); 
+           
+           for(int i = 0; i < ladders.length; i++) {
+        	   ladders[i] = new Ladder(45 + (int) (Math.random() * (656-45)) , 370 + (int) (Math.random() * (470-370)) , 45 + (int) (Math.random() * (656-45)),85 + (int) (Math.random() * (180-85)));
+        	   ladders[i].draw(g);
+           }
 
-           // super.paintComponent(g);
-            g.setColor(Color.BLACK);
-            g.fillOval(50,50,200,200);
 
+           Player p1 = new Player("player1",startX,startY,Color.BLACK);
+           p1.paint(g);
+
+        }
+
+
+//        @Override
+//        public void componentResized(ComponentEvent e) {
+//            //this.setPreferredSize();
+//        }
+//
+//        @Override
+//        public void componentMoved(ComponentEvent e) {
+//
+//        }
+//
+//        @Override
+//        public void componentShown(ComponentEvent e) {
+//
+//        }
+//
+//        @Override
+//        public void componentHidden(ComponentEvent e) {
+//
+//        }
+    }
+
+
+    public class PlayerRun extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            startX++;
         }
     }
 
+
+    public class Player
+    {
+        int x ;
+        int y ;
+        Color c ;
+        String name  ;
+
+        public Player(String name ,int x,int y , Color c)
+        {
+            this.x = x ;
+            this.y = y ;
+            this.name = name ;
+            this.c = c ;
+
+        }
+
+        public void paint(Graphics g)
+        {
+            g.setColor(c);
+            g.fillOval(x,y,13,13);
+            g.fillRect(x,y+12,13,13);
+        }
+    }
 
 
 
